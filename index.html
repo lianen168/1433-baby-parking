@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1433.baby - 一生一世在一起</title>
+    <style>
+        :root {
+            --primary-love: #e84393;
+            --primary-warm: #fd79a8;
+            --gold: #f1c40f;
+            --bg-deep: #2d3436;
+            --text-light: #dfe6e9;
+            --card-glass: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: radial-gradient(circle at center, #2c3e50, #000000);
+            color: var(--text-light);
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* 头部样式 */
+        header {
+            text-align: center;
+            padding: 5rem 1rem 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .domain-container {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        /* 1433 动态效果：流金岁月 - 象征永恒的承诺 */
+        .part-number {
+            font-size: 5rem;
+            font-weight: 900;
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shine 4s linear infinite;
+            text-shadow: 0 0 20px rgba(241, 196, 15, 0.3);
+            letter-spacing: -2px;
+        }
+
+        @keyframes shine {
+            to { background-position: 200% center; }
+        }
+
+        /* .baby 动态效果：呼吸律动 - 象征生命的温柔 */
+        .part-suffix {
+            font-size: 4rem;
+            font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+            font-weight: bold;
+            color: var(--primary-warm);
+            animation: breathe 3s ease-in-out infinite;
+            text-shadow: 0 0 15px rgba(253, 121, 168, 0.6);
+        }
+
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); opacity: 0.9; text-shadow: 0 0 15px rgba(253, 121, 168, 0.6); }
+            50% { transform: scale(1.05); opacity: 1; text-shadow: 0 0 25px rgba(232, 67, 147, 0.9); }
+        }
+
+        .slogan {
+            font-size: 1.6rem;
+            margin-top: 1.5rem;
+            font-weight: 300;
+            background: linear-gradient(90deg, #fff, #fab1a0);
+            -webkit-background-clip: text;
+            color: transparent;
+            letter-spacing: 2px;
+        }
+
+        /* 视觉容器 */
+        .visual-container {
+            width: 100%;
+            height: 350px;
+            position: relative;
+            margin: 20px 0;
+            background: radial-gradient(circle at center, rgba(232, 67, 147, 0.1), transparent 70%);
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .visual-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.4);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* 八大领域卡片布局 */
+        .features-section {
+            width: 90%;
+            max-width: 1300px;
+            margin: 40px auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            color: #b2bec3;
+            font-weight: 300;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-glass);
+            border-radius: 20px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-love), var(--gold));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.12);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            filter: drop-shadow(0 0 10px rgba(255,255,255,0.2));
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            color: #fff;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #b2bec3;
+            line-height: 1.6;
+        }
+
+        /* 购买区域 */
+        .buy-area {
+            text-align: center;
+            margin: 60px 0;
+            padding: 50px;
+            background: linear-gradient(rgba(0,0,0,0), rgba(232, 67, 147, 0.1));
+            width: 100%;
+        }
+
+        .price {
+            font-size: 4rem;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 30px;
+            display: block;
+            text-shadow: 0 0 20px rgba(232, 67, 147, 0.5);
+        }
+
+        .buy-btn {
+            background: linear-gradient(45deg, #d63031, #e84393);
+            border: none;
+            padding: 20px 60px;
+            color: white;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            box-shadow: 0 10px 25px rgba(214, 48, 49, 0.4);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .buy-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(232, 67, 147, 0.6);
+        }
+
+        /* 底部 */
+        footer {
+            padding-bottom: 60px;
+            text-align: center;
+        }
+
+        .email-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 30px;
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: background 0.3s;
+            position: relative;
+        }
+
+        .email-box:hover {
+            background: rgba(255,255,255,0.15);
+        }
+
+        .copy-msg {
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #00b894;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+
+        .copy-msg.visible {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .part-number { font-size: 3.5rem; }
+            .part-suffix { font-size: 2.5rem; }
+            .features-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="domain-container">
+            <span class="part-number">1433</span>
+            <span class="part-suffix">.baby</span>
+        </div>
+        <div class="slogan">一生一世在一起 · 数字时代的永恒誓约</div>
+    </header>
+
+    <div class="visual-container">
+        <canvas id="flowCanvas"></canvas>
+        <div class="visual-caption">♾️ 爱意流动 · 恋人牵手可视化</div>
+    </div>
+
+    <section class="features-section">
+        <div class="section-title">— 8大核心价值场景 —</div>
+        
+        <div class="features-grid">
+            <!-- 1. 数字契约 -->
+            <div class="card">
+                <span class="card-icon">📜</span>
+                <div class="card-title">永恒数字契约</div>
+                <div class="card-desc">"1433"即"一生一世"。利用此域名部署基于区块链的爱情智能合约，将誓言刻在互联网的基石上，永不磨灭。</div>
+            </div>
+            
+            <!-- 2. 新生儿主页 -->
+            <div class="card">
+                <span class="card-icon">👶</span>
+                <div class="card-title">宝贝成长编年史</div>
+                <div class="card-desc">.baby 的本意。为孩子建立一个独立的数字家园，从第一声啼哭到十八岁成人礼，完整记录成长的每一刻。</div>
+            </div>
+
+            <!-- 3. 情侣空间 -->
+            <div class="card">
+                <span class="card-icon">💞</span>
+                <div class="card-title">私密二人世界</div>
+                <div class="card-desc">在这个喧嚣的社交网络之外，开辟一块只属于"我们"的静谧自留地，存储聊天记录、合影与爱的密码。</div>
+            </div>
+
+            <!-- 4. 家族传承 -->
+            <div class="card">
+                <span class="card-icon">🏛️</span>
+                <div class="card-title">家族数字资产信托</div>
+                <div class="card-desc">域名是数字地产。持有此极品数字域名，如同持有一块数字世界的传世地皮，不仅保值，更承载家族精神。</div>
+            </div>
+
+            <!-- 5. 纪念日 -->
+            <div class="card">
+                <span class="card-icon">💎</span>
+                <div class="card-title">结婚纪念日臻礼</div>
+                <div class="card-desc">比钻戒更具未来感的礼物。在结婚纪念日送出"1433.baby"，寓意"我们的一生一世与孩子的未来"，浪漫至极。</div>
+            </div>
+
+            <!-- 6. 元宇宙 -->
+            <div class="card">
+                <span class="card-icon">🌐</span>
+                <div class="card-title">Web3 家庭入口</div>
+                <div class="card-desc">通往元宇宙家庭空间的唯一门牌号。未来在虚拟世界中，这就是你们共同建设的"家"的坐标。</div>
+            </div>
+
+            <!-- 7. 时光胶囊 -->
+            <div class="card">
+                <span class="card-icon">⏳</span>
+                <div class="card-title">未来时光胶囊</div>
+                <div class="card-desc">设定在未来开启的信箱。父母现在写下的期许，恋人此刻许下的愿望，将在10年、20年后通过此域名解封。</div>
+            </div>
+
+            <!-- 8. AI 伴侣 -->
+            <div class="card">
+                <span class="card-icon">🤖</span>
+                <div class="card-title">家庭 AI 守护者</div>
+                <div class="card-desc">绑定家庭专属的人工智能模型。1433.baby 将成为家庭 AI 助手的唤醒词，守护全家人的健康与记忆。</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="buy-area">
+        <div class="price">$100 USD</div>
+        <button class="buy-btn" onclick="openLink()">立即锁定 · 一生一世</button>
+        <p style="margin-top: 20px; color: #636e72; font-size: 0.9rem;">Spaceship 平台托管 · 极速过户 · 安全无忧</p>
+    </div>
+
+    <footer>
+        <p style="margin-bottom: 15px; color: #b2bec3;">联系卖家</p>
+        <div class="email-box" onclick="copyEmail()">
+            <span>📧 joshua369x@gmail.com</span>
+            <div class="copy-msg" id="msg">✅ 已复制</div>
+        </div>
+    </footer>
+
+    <script>
+        // 1. 购买链接
+        function openLink() {
+            window.open('https://www.spaceship.com/s/buy/1433.baby/ohoy8p1sEDGJdGjh', '_blank');
+        }
+
+        // 2. 复制邮箱
+        function copyEmail() {
+            const email = 'joshua369x@gmail.com';
+            
+            // 兼容性复制方法
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(email).then(showTooltip);
+            } else {
+                const textArea = document.createElement("textarea");
+                textArea.value = email;
+                textArea.style.position = "fixed";
+                textArea.style.left = "-9999px";
+                document.body.appendChild(textArea);
+                textArea.focus();
+                textArea.select();
+                try {
+                    document.execCommand('copy');
+                    showTooltip();
+                } catch (err) {
+                    console.error('Copy failed', err);
+                }
+                document.body.removeChild(textArea);
+            }
+        }
+
+        function showTooltip() {
+            const msg = document.getElementById('msg');
+            msg.classList.add('visible');
+            setTimeout(() => {
+                msg.classList.remove('visible');
+            }, 2000);
+        }
+
+        // 3. 可视化效果：恋人牵手流动的数字
+        const canvas = document.getElementById('flowCanvas');
+        const ctx = canvas.getContext('2d');
+        let w, h;
+        let particles = [];
+
+        function resize() {
+            w = canvas.width = document.querySelector('.visual-container').offsetWidth;
+            h = canvas.height = document.querySelector('.visual-container').offsetHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        class Particle {
+            constructor() {
+                this.reset();
+                this.y = Math.random() * h; // 初始随机位置
+            }
+            
+            reset() {
+                this.x = Math.random() * w;
+                this.y = h + Math.random() * 20; // 从底部重生
+                this.speedY = Math.random() * 1 + 0.5;
+                this.size = Math.random() * 2 + 1;
+                // 1, 4, 3, 3 和 ❤
+                const chars = ['1', '4', '3', '3', '❤'];
+                this.char = chars[Math.floor(Math.random() * chars.length)];
+                this.color = this.char === '❤' ? '#e84393' : '#74b9ff';
+                this.opacity = Math.random() * 0.5 + 0.2;
+                
+                // 目标汇聚点（模拟两手相牵的中心点）
+                this.centerX = w / 2;
+                this.centerY = h / 2;
+            }
+
+            update() {
+                this.y -= this.speedY;
+                
+                // 简单的汇聚算法：向中心靠拢
+                const dx = this.centerX - this.x;
+                // 让粒子在上升过程中慢慢向中心弯曲，形成漏斗状或牵手状的能量流
+                this.x += dx * 0.005; 
+
+                // 闪烁效果
+                if (Math.random() > 0.95) {
+                    this.opacity = Math.random() * 0.8 + 0.2;
+                }
+
+                if (this.y < -20) this.reset();
+            }
+
+            draw() {
+                ctx.globalAlpha = this.opacity;
+                ctx.fillStyle = this.color;
+                ctx.font = `${this.size * 6}px Arial`;
+                ctx.fillText(this.char, this.x, this.y);
+            }
+        }
+
+        // 初始化粒子
+        for (let i = 0; i < 200; i++) {
+            particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, w, h);
+            
+            // 绘制背景微弱的连接线（象征纽带）
+            ctx.beginPath();
+            ctx.moveTo(w/2, h);
+            ctx.lineTo(w/2, 0);
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.02)';
+            ctx.lineWidth = 50;
+            ctx.stroke();
+
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+    </script>
+</body>
+</html>
