@@ -3,7 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>1433.baby - 一生一世在一起</title>
+    <title>1433.baby - 一生一世在一起 | 顶级数字爱情资产</title>
+
+    <!-- SEO 优化 -->
+    <meta name="description" content="1433.baby 顶级爱情域名，寓意'一生一世'。无论是数字求婚誓言、新生儿成长档案、情侣私密空间，还是家族数字传承，这里是您在Web3时代的永恒爱巢。">
+    <meta name="keywords" content="1433, 1433.baby, 爱情域名, 情侣空间, 新生儿档案, 结婚纪念日礼物, 数字资产, Web3家庭入口, 一生一世">
+    <meta name="author" content="1433.baby">
+
+    <!-- 社交媒体分享 (Open Graph / Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.1433.baby/"> <!-- 请替换为您实际上线的URL -->
+    <meta property="og:title" content="1433.baby - 一生一世在一起">
+    <meta property="og:description" content="1433.baby 顶级爱情域名，寓意'一生一世'。这里是您在数字时代的永恒爱巢。">
+    <meta property="og:image" content="https://www.1433.baby/social-preview.jpg"> <!-- 请替换为实际的预览图URL -->
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.1433.baby/">
+    <meta name="twitter:title" content="1433.baby - 一生一世在一起">
+    <meta name="twitter:description" content="1433.baby 顶级爱情域名，寓意'一生一世'。这里是您在数字时代的永恒爱巢。">
+    <meta name="twitter:image" content="https://www.1433.baby/social-preview.jpg">
+
     <style>
         :root {
             --primary-love: #e84393;
@@ -191,7 +211,7 @@
         /* 购买区域 */
         .buy-area {
             text-align: center;
-            margin: 60px 0;
+            margin: 60px 0 20px;
             padding: 50px;
             background: linear-gradient(rgba(0,0,0,0), rgba(232, 67, 147, 0.1));
             width: 100%;
@@ -226,6 +246,93 @@
         .buy-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 15px 35px rgba(232, 67, 147, 0.6);
+        }
+
+        /* 报价与留言表单区域 */
+        .offer-section {
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto 60px;
+            padding: 40px 30px;
+            background: var(--card-glass);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        .offer-title {
+            font-size: 1.5rem;
+            color: var(--primary-warm);
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .offer-desc {
+            font-size: 0.95rem;
+            color: #b2bec3;
+            margin-bottom: 25px;
+        }
+
+        .offer-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .offer-form input, .offer-form textarea {
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.3s;
+            box-sizing: border-box;
+        }
+
+        .offer-form input:focus, .offer-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-warm);
+        }
+
+        .offer-form input::placeholder, .offer-form textarea::placeholder {
+            color: #888;
+        }
+
+        .offer-btn {
+            background: transparent;
+            border: 2px solid var(--primary-love);
+            color: var(--primary-warm);
+            padding: 15px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .offer-btn:hover:not(:disabled) {
+            background: var(--primary-love);
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(232, 67, 147, 0.4);
+        }
+
+        .offer-btn:disabled {
+            border-color: #555;
+            color: #555;
+            cursor: not-allowed;
+            background: transparent;
+        }
+
+        #form-status {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            min-height: 20px;
+            transition: color 0.3s;
         }
 
         /* 底部 */
@@ -274,6 +381,7 @@
             .part-number { font-size: 3.5rem; }
             .part-suffix { font-size: 2.5rem; }
             .features-grid { grid-template-columns: 1fr; }
+            .offer-section { padding: 30px 20px; }
         }
     </style>
 </head>
@@ -296,56 +404,48 @@
         <div class="section-title">— 8大核心价值场景 —</div>
         
         <div class="features-grid">
-            <!-- 1. 数字契约 -->
             <div class="card">
                 <span class="card-icon">📜</span>
                 <div class="card-title">永恒数字契约</div>
                 <div class="card-desc">"1433"即"一生一世"。利用此域名部署基于区块链的爱情智能合约，将誓言刻在互联网的基石上，永不磨灭。</div>
             </div>
             
-            <!-- 2. 新生儿主页 -->
             <div class="card">
                 <span class="card-icon">👶</span>
                 <div class="card-title">宝贝成长编年史</div>
                 <div class="card-desc">.baby 的本意。为孩子建立一个独立的数字家园，从第一声啼哭到十八岁成人礼，完整记录成长的每一刻。</div>
             </div>
 
-            <!-- 3. 情侣空间 -->
             <div class="card">
                 <span class="card-icon">💞</span>
                 <div class="card-title">私密二人世界</div>
                 <div class="card-desc">在这个喧嚣的社交网络之外，开辟一块只属于"我们"的静谧自留地，存储聊天记录、合影与爱的密码。</div>
             </div>
 
-            <!-- 4. 家族传承 -->
             <div class="card">
                 <span class="card-icon">🏛️</span>
                 <div class="card-title">家族数字资产信托</div>
                 <div class="card-desc">域名是数字地产。持有此极品数字域名，如同持有一块数字世界的传世地皮，不仅保值，更承载家族精神。</div>
             </div>
 
-            <!-- 5. 纪念日 -->
             <div class="card">
                 <span class="card-icon">💎</span>
                 <div class="card-title">结婚纪念日臻礼</div>
                 <div class="card-desc">比钻戒更具未来感的礼物。在结婚纪念日送出"1433.baby"，寓意"我们的一生一世与孩子的未来"，浪漫至极。</div>
             </div>
 
-            <!-- 6. 元宇宙 -->
             <div class="card">
                 <span class="card-icon">🌐</span>
                 <div class="card-title">Web3 家庭入口</div>
                 <div class="card-desc">通往元宇宙家庭空间的唯一门牌号。未来在虚拟世界中，这就是你们共同建设的"家"的坐标。</div>
             </div>
 
-            <!-- 7. 时光胶囊 -->
             <div class="card">
                 <span class="card-icon">⏳</span>
                 <div class="card-title">未来时光胶囊</div>
                 <div class="card-desc">设定在未来开启的信箱。父母现在写下的期许，恋人此刻许下的愿望，将在10年、20年后通过此域名解封。</div>
             </div>
 
-            <!-- 8. AI 伴侣 -->
             <div class="card">
                 <span class="card-icon">🤖</span>
                 <div class="card-title">家庭 AI 守护者</div>
@@ -354,18 +454,35 @@
         </div>
     </section>
 
+    <!-- 立即购买 -->
     <div class="buy-area">
         <div class="price">$100 USD</div>
         <button class="buy-btn" onclick="openLink()">立即锁定 · 一生一世</button>
         <p style="margin-top: 20px; color: #636e72; font-size: 0.9rem;">Spaceship 平台托管 · 极速过户 · 安全无忧</p>
     </div>
 
+    <!-- 报价与留言表单 -->
+    <section class="offer-section">
+        <h2 class="offer-title">💌 提交专属心意 / 报价</h2>
+        <p class="offer-desc">除了直接购买，您也可以留下您的报价或定制需求。</p>
+        <form id="offerForm" action="https://formspree.io/f/meellprv" method="POST" class="offer-form">
+            <input type="text" name="name" placeholder="您的称呼 / Name" required>
+            <input type="email" name="email" placeholder="您的邮箱 / Email" required>
+            <input type="text" name="offer" placeholder="您的报价 / Offer (USD) (选填)">
+            <textarea name="message" rows="4" placeholder="您的爱情寄语或具体需求..." required></textarea>
+            <button type="submit" class="offer-btn" id="submitBtn">发送心意</button>
+            <div id="form-status"></div>
+        </form>
+    </section>
+
+    <!-- 底部联系 -->
     <footer>
         <p style="margin-bottom: 15px; color: #b2bec3;">联系卖家</p>
         <div class="email-box" onclick="copyEmail()">
             <span>📧 joshua369x@gmail.com</span>
             <div class="copy-msg" id="msg">✅ 已复制</div>
         </div>
+        <p style="margin-top: 20px; color: #636e72; font-size: 0.8rem;">&copy; 2026 1433.baby - 保留所有权利</p>
     </footer>
 
     <script>
@@ -378,7 +495,6 @@
         function copyEmail() {
             const email = 'joshua369x@gmail.com';
             
-            // 兼容性复制方法
             if (navigator.clipboard && window.isSecureContext) {
                 navigator.clipboard.writeText(email).then(showTooltip);
             } else {
@@ -407,7 +523,54 @@
             }, 2000);
         }
 
-        // 3. 可视化效果：恋人牵手流动的数字
+        // 3. 表单 AJAX 提交逻辑
+        const offerForm = document.getElementById('offerForm');
+        offerForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const submitBtn = document.getElementById('submitBtn');
+            const statusDiv = document.getElementById('form-status');
+            const originalText = submitBtn.textContent;
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = '发送中...';
+            statusDiv.textContent = '正在为您传递心意...';
+            statusDiv.style.color = 'var(--primary-warm)';
+
+            fetch(offerForm.action, {
+                method: 'POST',
+                body: new FormData(offerForm),
+                headers: { 'Accept': 'application/json' }
+            }).then(response => {
+                if (response.ok) {
+                    statusDiv.textContent = '心意已传达！我们会尽快与您联系。';
+                    statusDiv.style.color = '#00b894';
+                    submitBtn.textContent = '发送成功';
+                    offerForm.reset();
+                } else {
+                    response.json().then(data => {
+                        statusDiv.textContent = data.errors ? data.errors.map(err => err.message).join(", ") : '发送失败，请检查填写信息。';
+                        statusDiv.style.color = '#d63031';
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalText;
+                    });
+                }
+            }).catch(error => {
+                statusDiv.textContent = '网络错误，请稍后重试。';
+                statusDiv.style.color = '#d63031';
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalText;
+            }).finally(() => {
+                setTimeout(() => {
+                    statusDiv.textContent = '';
+                    if(submitBtn.textContent === '发送成功') {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }
+                }, 5000);
+            });
+        });
+
+        // 4. 可视化效果：恋人牵手流动的数字
         const canvas = document.getElementById('flowCanvas');
         const ctx = canvas.getContext('2d');
         let w, h;
@@ -423,38 +586,32 @@
         class Particle {
             constructor() {
                 this.reset();
-                this.y = Math.random() * h; // 初始随机位置
+                this.y = Math.random() * h;
             }
             
             reset() {
                 this.x = Math.random() * w;
-                this.y = h + Math.random() * 20; // 从底部重生
+                this.y = h + Math.random() * 20;
                 this.speedY = Math.random() * 1 + 0.5;
                 this.size = Math.random() * 2 + 1;
-                // 1, 4, 3, 3 和 ❤
+                
                 const chars = ['1', '4', '3', '3', '❤'];
                 this.char = chars[Math.floor(Math.random() * chars.length)];
                 this.color = this.char === '❤' ? '#e84393' : '#74b9ff';
                 this.opacity = Math.random() * 0.5 + 0.2;
                 
-                // 目标汇聚点（模拟两手相牵的中心点）
                 this.centerX = w / 2;
                 this.centerY = h / 2;
             }
 
             update() {
                 this.y -= this.speedY;
-                
-                // 简单的汇聚算法：向中心靠拢
                 const dx = this.centerX - this.x;
-                // 让粒子在上升过程中慢慢向中心弯曲，形成漏斗状或牵手状的能量流
                 this.x += dx * 0.005; 
-
-                // 闪烁效果
+                
                 if (Math.random() > 0.95) {
                     this.opacity = Math.random() * 0.8 + 0.2;
                 }
-
                 if (this.y < -20) this.reset();
             }
 
@@ -466,7 +623,6 @@
             }
         }
 
-        // 初始化粒子
         for (let i = 0; i < 200; i++) {
             particles.push(new Particle());
         }
@@ -474,7 +630,6 @@
         function animate() {
             ctx.clearRect(0, 0, w, h);
             
-            // 绘制背景微弱的连接线（象征纽带）
             ctx.beginPath();
             ctx.moveTo(w/2, h);
             ctx.lineTo(w/2, 0);
@@ -489,7 +644,6 @@
             requestAnimationFrame(animate);
         }
         animate();
-
     </script>
 </body>
 </html>
